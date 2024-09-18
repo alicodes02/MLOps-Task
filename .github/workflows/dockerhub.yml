@@ -20,7 +20,7 @@ jobs:
           id: build-docker-image
           run: |
             ls -la 
-            docker build -t alicodes02/mlops-model
+            docker build -t alicodes02/mlops-model .
         - name: push the docker image
           id: push-docker-image
           run: docker push ${{secrets.DOCKERHUB_USERNAME}}/mlops-model:latest
